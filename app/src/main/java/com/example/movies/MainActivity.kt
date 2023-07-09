@@ -1,6 +1,7 @@
 package com.example.movies
 
 import android.annotation.SuppressLint
+import android.opengl.Visibility
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.method.HideReturnsTransformationMethod
@@ -10,9 +11,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-//import com.example.Domain.model.LoginModel
+import androidx.core.view.isGone
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -50,14 +51,22 @@ class MainActivity() : AppCompatActivity() {
             }
         }
     }
-    fun hide(){
+    fun hide() {
+
         val myLinearLayout = findViewById<LinearLayout>(R.id.signuplinear)
-        myLinearLayout.visibility = View.GONE
+        val mainlinearbase = findViewById<LinearLayout>(R.id.linearbase)
+        val signbackbut = findViewById<Button>(R.id.signbbutton)
+        signbackbut.setOnClickListener() {
+            mainlinearbase.visibility = View.VISIBLE
+            myLinearLayout.visibility = View.GONE
+        }
     }
     fun signupp(){
         val signuplinear = findViewById<LinearLayout>(R.id.signuplinear)
         val Signupbut = findViewById<Button>(R.id.signupbutinmain)
+        val mainlinearbase = findViewById<LinearLayout>(R.id.linearbase)
         Signupbut.setOnClickListener {
+            mainlinearbase.visibility = View.GONE
             signuplinear.visibility = View.VISIBLE
             validateSignupCpassword()
         }
