@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.Domain.model.LoginModel
+//import com.example.Domain.model.LoginModel
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -28,12 +28,12 @@ class MainActivity() : AppCompatActivity() {
         showhideicon()
     }
     @SuppressLint("WrongViewCast")
-    private fun login(loginModel: LoginModel){
-
-//        val imageView = findViewById<ImageView>(R.id.imageview)
-//        Glide.with(this).load(loginModel.image).into(imageView)
-
-    }
+//    private fun login(loginModel: LoginModel){
+//
+////        val imageView = findViewById<ImageView>(R.id.imageview)
+////        Glide.with(this).load(loginModel.image).into(imageView)
+//
+//    }
     fun showhideicon(){
         val imageView = findViewById<ImageView>(R.id.imageView)
         val imageView2 = findViewById<ImageView>(R.id.imageView2)

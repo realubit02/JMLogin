@@ -97,16 +97,13 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="Login" />
-            <Button
-                android:id="@+id/Logout"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="Logout" />
+
             <TextView
                 android:id="@+id/or"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="or"
                 android:textColor="@color/white"/>
             <Button
@@ -114,7 +111,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Signup"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:backgroundTint="@color/red"
+                android:textColorHint="@color/red"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
