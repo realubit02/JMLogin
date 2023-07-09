@@ -12,6 +12,7 @@
             android:id="@+id/linearbase"
             android:orientation="vertical"
             android:gravity="center">
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -97,16 +98,13 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:text="Login" />
-            <Button
-                android:id="@+id/Logout"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:text="Logout" />
+
             <TextView
                 android:id="@+id/or"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="or"
                 android:textColor="@color/white"/>
             <Button
@@ -114,7 +112,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Signup"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:backgroundTint="@color/red"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,6 +124,7 @@
             app:flow_verticalAlign="center"
             android:paddingTop="100dp"
             android:gravity="center"
+            android:background="@drawable/bg"
             android:visibility="gone">
             <TextView
                 android:layout_width="100dp"
@@ -140,7 +141,8 @@
                 app:boxStrokeColor="@color/white"
                 app:hintTextColor="@color/white"
                 android:textColorHint="@color/white"
-                android:hint="Username">
+                android:hint="Username"
+                >
                 <EditText
                     android:id="@+id/signUpUsername"
                     android:layout_width="300dp"
@@ -204,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:text="Verify"
                     android:layout_marginLeft="200dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="8dp"
                     android:id="@+id/verify" />
             </RelativeLayout>
             <com.google.android.material.textfield.TextInputLayout
