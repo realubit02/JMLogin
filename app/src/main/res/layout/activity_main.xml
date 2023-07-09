@@ -123,7 +123,8 @@
             app:flow_verticalAlign="center"
             android:paddingTop="100dp"
             android:gravity="center"
-            android:visibility="gone">
+            android:background="@drawable/bg"
+            android:visibility="visible">
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -139,7 +140,8 @@
                 app:boxStrokeColor="@color/white"
                 app:hintTextColor="@color/white"
                 android:textColorHint="@color/white"
-                android:hint="Username">
+                android:hint="Username"
+                >
                 <EditText
                     android:id="@+id/signUpUsername"
                     android:layout_width="300dp"
@@ -203,7 +205,7 @@
                     android:layout_height="wrap_content"
                     android:text="Verify"
                     android:layout_marginLeft="200dp"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="8dp"
                     android:id="@+id/verify" />
             </RelativeLayout>
             <com.google.android.material.textfield.TextInputLayout
