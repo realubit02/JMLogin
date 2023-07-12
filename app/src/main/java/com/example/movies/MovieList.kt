@@ -1,24 +1,26 @@
 package com.example.movies
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.movies.databinding.ActivityMovieListBinding
 
 class MovieList : AppCompatActivity() {
 
 
-private lateinit var binding: ActivityMovieListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
-
-
+        setContentView(R.layout.activity_movie_list)
+        Logout()
+    }
+    fun Logout(){
+        val Logoutbut = findViewById<TextView>(R.id.logoutid)
+        Logoutbut.setOnClickListener{
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        }
     }
 }
