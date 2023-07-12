@@ -54,7 +54,8 @@
                     app:boxStrokeColor="@color/white"
                     app:hintTextColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:hint="Password">
+                    android:hint="Password"
+                    android:id="@+id/textfield">
                     <EditText
                         android:id="@+id/pwd"
                         android:layout_width="match_parent"
@@ -66,11 +67,9 @@
                         android:shadowColor="@color/white"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textColorHint="@color/white"
                         android:textSize="16dp"
                         android:textStyle="italic"
-                        android:textCursorDrawable="@color/white"
-                        />
+                        android:textCursorDrawable="@color/white" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <ImageView
                     android:id="@+id/imageView"
@@ -80,6 +79,7 @@
                     android:layout_marginTop="20dp"
                     android:clickable="true"
                     android:contentDescription="Clickable Image"
+                    android:visibility="invisible"
                     android:focusable="true"
                     android:src="@drawable/baseline_visibility_off_24" />
                 <ImageView
@@ -88,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="270dp"
                     android:layout_marginTop="20dp"
+                    android:visibility="invisible"
                     android:clickable="true"
                     android:contentDescription="Clickable Image"
                     android:focusable="true"
@@ -97,7 +98,8 @@
                 android:id="@+id/Login"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:text="Login" />
+                android:text="Login"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/or"
@@ -111,6 +113,7 @@
                 android:id="@+id/signupbutinmain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:text="Signup"
                 android:textAlignment="center"
                 android:backgroundTint="@color/red"

@@ -1,6 +1,7 @@
 package com.example.movies
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.opengl.Visibility
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -11,10 +12,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.core.view.isGone
 import dagger.hilt.android.AndroidEntryPoint
+import org.jetbrains.annotations.NotNull
 
 
 @AndroidEntryPoint
@@ -27,27 +31,33 @@ class MainActivity() : AppCompatActivity() {
         signupp()
         signbackbutton()
         verifytimer()
-        showhideicon()
+        login ()
+        showhidepasswrodicon()
+
     }
-    @SuppressLint("WrongViewCast")
-//    private fun login(loginModel: LoginModel){
-//
-////        val imageView = findViewById<ImageView>(R.id.imageview)
-////        Glide.with(this).load(loginModel.image).into(imageView)
-//
-//    }
-    fun showhideicon(){
+
+    fun login (){
+        val loginbutton = findViewById<Button>(R.id.Login)
+        loginbutton.setOnClickListener(){
+            val intent = Intent(this, MovieList::class.java)
+            startActivity(intent)
+        }
+    }
+    fun showhidepasswrodicon(){
         val imageView = findViewById<ImageView>(R.id.imageView)
         val imageView2 = findViewById<ImageView>(R.id.imageView2)
         val pwd = findViewById<EditText>(R.id.pwd)
-        imageView2.setOnClickListener {
-            if (imageView.visibility == View.VISIBLE) {
-                pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                imageView.visibility = View.INVISIBLE
-            } else if (imageView2.visibility == View.VISIBLE)
-            {
-                pwd.transformationMethod = PasswordTransformationMethod.getInstance()
-                imageView.visibility = View.VISIBLE
+        if(pwd.text != null){
+            imageView2.visibility == View.VISIBLE
+
+            imageView2.setOnClickListener {
+                if (imageView.visibility == View.VISIBLE) {
+                    pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                    imageView.visibility = View.GONE
+                } else if (imageView2.visibility == View.VISIBLE && imageView.visibility == View.VISIBLE) {
+                    pwd.transformationMethod = PasswordTransformationMethod.getInstance()
+                    imageView.visibility = View.VISIBLE
+                }
             }
         }
     }
