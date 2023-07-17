@@ -14,7 +14,6 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Login"
@@ -31,7 +30,6 @@
                 android:textColorHint="@color/white"
                 android:hint="Username">
                 <EditText
-                    android:id="@+id/editTextText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableLeft="@drawable/baseline_person_24"
@@ -54,8 +52,7 @@
                     app:boxStrokeColor="@color/white"
                     app:hintTextColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:hint="Password"
-                    android:id="@+id/textfield">
+                    android:hint="Password">
                     <EditText
                         android:id="@+id/pwd"
                         android:layout_width="match_parent"
@@ -78,8 +75,8 @@
                     android:layout_marginLeft="270dp"
                     android:layout_marginTop="20dp"
                     android:clickable="true"
-                    android:contentDescription="Clickable Image"
                     android:visibility="invisible"
+                    android:contentDescription="Clickable Image"
                     android:focusable="true"
                     android:src="@drawable/baseline_visibility_off_24" />
                 <ImageView
@@ -88,8 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="270dp"
                     android:layout_marginTop="20dp"
-                    android:visibility="invisible"
                     android:clickable="true"
+                    android:visibility="invisible"
                     android:contentDescription="Clickable Image"
                     android:focusable="true"
                     android:src="@drawable/baseline_visibility_24" />
@@ -102,7 +99,6 @@
                 android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/or"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -147,7 +143,6 @@
                 android:hint="Username"
                 >
                 <EditText
-                    android:id="@+id/signUpUsername"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
@@ -193,10 +188,8 @@
                     app:boxStrokeColor="@color/white"
                     app:hintTextColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:hint="Mobile Number"
-                    android:id="@+id/numberbox">
+                    android:hint="Mobile Number">
                     <EditText
-                        android:id="@+id/signUpnumber"
                         android:layout_width="300dp"
                         android:textColor="@color/white"
                         android:layout_height="wrap_content"
@@ -221,7 +214,6 @@
                 android:textColorHint="@color/white"
                 android:hint="Code">
                 <EditText
-                    android:id="@+id/signUpcode"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
@@ -236,7 +228,6 @@
                 android:textColorHint="@color/white"
                 android:hint="Email address">
                 <EditText
-                    android:id="@+id/signUpemail"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
