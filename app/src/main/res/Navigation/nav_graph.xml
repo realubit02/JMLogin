@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.moviedataapp.movies.MoviesFragment"
+        android:label="Movies Data App"
+        tools:layout="@layout/fragment_movies">
+        <action
+            android:id="@+id/action_moviesFragment_to_movieDetailFragment"
+            app:destination="@id/navigation2" />
+    </fragment>
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/navigation">
+        <navigation
+            android:id="@+id/navigation"
+            app:startDestination="@id/movieDetailFragment">
+            <fragment
+                android:id="@+id/movieDetailFragment"
+                android:name="com.example.moviedataapp.detail.MovieDetailFragment"
+                android:label="Movie Detail"
+                tools:layout="@layout/movie_detail_fragment">
+                <argument
+                    android:name="selectedMovieId"
+                    app:argType="long" />
+                <argument
+                    android:name="barColor"
+                    app:argType="integer" />
+                <argument
+                    android:name="textColor"
+                    app:argType="integer" />
+                <action
+                    android:id="@+id/action_movieDetailFragment_to_moviesFragment"
+                    app:destination="@id/moviesFragment"
+                    app:popUpTo="@id/moviesFragment"
+                    app:popUpToInclusive="true" />
+            </fragment>
+        </navigation>
+    </navigation>
+
+</navigation>
